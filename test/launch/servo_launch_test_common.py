@@ -119,7 +119,7 @@ def generate_servo_test_description(
     #     composable_node_descriptions=[
     #         ComposableNode(
     #             package="moveit_servo_kinova",
-    #             plugin="moveit_servo_kinova::ServoNode",
+    #             plugin="moveit_servo::ServoNode",
     #             name="servo_node",
     #             parameters=[
     #                 servo_params,

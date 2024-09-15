@@ -276,4 +276,4 @@ private:
 
 // Register the component with class_loader
 #include <rclcpp_components/register_node_macro.hpp>
-RCLCPP_COMPONENTS_REGISTER_NODE(moveit_servo_kinova::JoyToServoPub)
+RCLCPP_COMPONENTS_REGISTER_NODE(moveit_servo::JoyToServoPub)

@@ -86,8 +86,10 @@ ServoNode::ServoNode(const rclcpp::NodeOptions& options)
   }
 
   // Set up planning_scene_monitor
+  // planning_scene_monitor_ = std::make_shared<planning_scene_monitor::PlanningSceneMonitor>(
+  //     node_, robot_description_name, "planning_scene_monitor");
   planning_scene_monitor_ = std::make_shared<planning_scene_monitor::PlanningSceneMonitor>(
-      node_, robot_description_name, "planning_scene_monitor");
+      node_, robot_description_name, "monitored_planning_scene");
   planning_scene_monitor_->startStateMonitor(servo_parameters->joint_topic);
   planning_scene_monitor_->startSceneMonitor(servo_parameters->monitored_planning_scene_topic);
   planning_scene_monitor_->startWorldGeometryMonitor();
@@ -140,4 +142,4 @@ void ServoNode::unpauseCB(const std::shared_ptr<std_srvs::srv::Trigger::Request>
 
 // Register the component with class_loader
 #include <rclcpp_components/register_node_macro.hpp>
-RCLCPP_COMPONENTS_REGISTER_NODE(moveit_servo_kinova::ServoNode)
+RCLCPP_COMPONENTS_REGISTER_NODE(moveit_servo::ServoNode)

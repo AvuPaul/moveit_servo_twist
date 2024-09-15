@@ -95,12 +95,12 @@ target_link_libraries(${POSE_TRACKING} ${SERVO_LIB_NAME})
 add_library(${SERVO_COMPONENT_NODE} SHARED src/servo_node.cpp)
 ament_target_dependencies(${SERVO_COMPONENT_NODE} ${THIS_PACKAGE_INCLUDE_DEPENDS})
 target_link_libraries(${SERVO_COMPONENT_NODE} ${SERVO_LIB_NAME})
-rclcpp_components_register_nodes(${SERVO_COMPONENT_NODE} "moveit_servo_kinova::ServoNode")
+rclcpp_components_register_nodes(${SERVO_COMPONENT_NODE} "moveit_servo::ServoNode")
 
 # Add executable for using a controller
 add_library(${SERVO_CONTROLLER_INPUT} SHARED src/teleop_demo/joystick_servo_example.cpp)
 ament_target_dependencies(${SERVO_CONTROLLER_INPUT} ${THIS_PACKAGE_INCLUDE_DEPENDS})
-rclcpp_components_register_nodes(${SERVO_CONTROLLER_INPUT} "moveit_servo_kinova::JoyToServoPub")
+rclcpp_components_register_nodes(${SERVO_CONTROLLER_INPUT} "moveit_servo::JoyToServoPub")
 
 ######################
 ## Executable Nodes ##
