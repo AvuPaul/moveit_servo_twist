@@ -78,7 +78,7 @@ def generate_servo_test_description(*args, gtest_name: SomeSubstitutionsType):
                 package="tf2_ros",
                 plugin="tf2_ros::StaticTransformBroadcasterNode",
                 name="static_tf2_broadcaster",
-                parameters=[{"/child_frame_id": "panda_link0", "/frame_id": "world"}],
+                parameters=[{"/child_frame_id": "base_link", "/frame_id": "world"}],
             ),
         ],
         output="screen",

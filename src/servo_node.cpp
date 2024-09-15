@@ -140,4 +140,4 @@ void ServoNode::unpauseCB(const std::shared_ptr<std_srvs::srv::Trigger::Request>
 
 // Register the component with class_loader
 #include <rclcpp_components/register_node_macro.hpp>
-RCLCPP_COMPONENTS_REGISTER_NODE(moveit_servo::ServoNode)
+RCLCPP_COMPONENTS_REGISTER_NODE(moveit_servo_kinova::ServoNode)

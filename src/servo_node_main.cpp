@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
 
   rclcpp::NodeOptions options;
 
-  auto servo_node = std::make_shared<moveit_servo::ServoNode>(options);
+  auto servo_node = std::make_shared<moveit_servo_servo::ServoNode>(options);
 
   rclcpp::spin(servo_node->get_node_base_interface());
 

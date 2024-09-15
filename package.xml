@@ -8,6 +8,7 @@
   <maintainer email="andyz@utexas.edu">Andy Zelenak</maintainer>
   <maintainer email="tyler@picknik.ai">Tyler Weaver</maintainer>
   <maintainer email="henningkayser@picknik.ai">Henning Kayser</maintainer>
+  <maintainer email="p.janssen@avular.com">Paul Janssen</maintainer>
 
   <license>BSD 3-Clause</license>
 
@@ -49,7 +50,8 @@
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
   <test_depend>controller_manager</test_depend>
-  <test_depend>moveit_resources_panda_moveit_config</test_depend>
+  <!-- <test_depend>moveit_resources_panda_moveit_config</test_depend> -->
+  <test_depend>kinova_gen3_7dof_robotiq_2f_85_moveit_config</test_depend>
   <test_depend>ros_testing</test_depend>
 
   <export>

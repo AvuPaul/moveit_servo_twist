@@ -72,7 +72,7 @@ protected:
   void SetUp() override
   {
     robot_model_ = moveit::core::loadTestingRobotModel("panda");
-    joint_model_group_ = robot_model_->getJointModelGroup("panda_arm");
+    joint_model_group_ = robot_model_->getJointModelGroup("manipulator");
     // robot_model_ = moveit::core::loadTestingRobotModel("gen3");
     // joint_model_group_ = robot_model_->getJointModelGroup("manipulator");
   }
@@ -140,13 +140,13 @@ TEST_F(ServoCalcsUnitTests, SingularityScaling)
   // Start near a singularity
   std::shared_ptr<moveit::core::RobotState> robot_state = std::make_shared<moveit::core::RobotState>(robot_model_);
   robot_state->setToDefaultValues();
-  robot_state->setVariablePosition("panda_joint1", 0.221);
-  robot_state->setVariablePosition("panda_joint2", 0.530);
-  robot_state->setVariablePosition("panda_joint3", -0.231);
-  robot_state->setVariablePosition("panda_joint4", -0.920);
-  robot_state->setVariablePosition("panda_joint5", 0.117);
-  robot_state->setVariablePosition("panda_joint6", 1.439);
-  robot_state->setVariablePosition("panda_joint7", -1.286);
+  robot_state->setVariablePosition("joint_1", 0.221);
+  robot_state->setVariablePosition("joint_2", 0.530);
+  robot_state->setVariablePosition("joint_3", -0.231);
+  robot_state->setVariablePosition("joint_4", -0.920);
+  robot_state->setVariablePosition("joint_5", 0.117);
+  robot_state->setVariablePosition("joint_6", 1.439);
+  robot_state->setVariablePosition("joint_7", -1.286);
   // robot_state->setVariablePosition("joint1", 0.221);
   // robot_state->setVariablePosition("joint2", 0.530);
   // robot_state->setVariablePosition("joint3", -0.231);

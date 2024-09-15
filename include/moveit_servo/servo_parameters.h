@@ -64,7 +64,7 @@ struct ServoParameters
   // Properties of incoming commands
   std::string cartesian_command_in_topic{ "~/delta_twist_cmds" };
   std::string joint_command_in_topic{ "~/delta_joint_cmds" };
-  std::string robot_link_command_frame{ "panda_link0" };
+  std::string robot_link_command_frame{ "base_link" };
   // std::string robot_link_command_frame{ "base_link" };
   std::string command_in_type{ "unitless" };
   double linear_scale{ 0.4 };
@@ -73,7 +73,7 @@ struct ServoParameters
   // Properties of Servo calculations
   double override_velocity_scaling_factor{ 0.0 };
   // Properties of outgoing commands
-  std::string command_out_topic{ "/panda_arm_controller/joint_trajectory" };
+  std::string command_out_topic{ "/joint_trajectory_controller/joint_trajectory" };
   // std::string command_out_topic{ "/joint_trajectory_controller/joint_trajectory" };
   double publish_period{ 0.034 };
   std::string command_out_type{ "trajectory_msgs/JointTrajectory" };
@@ -84,9 +84,9 @@ struct ServoParameters
   std::string joint_topic{ "/joint_states" };
   std::string smoothing_filter_plugin_name{ "online_signal_smoothing::ButterworthFilterPlugin" };
   // MoveIt properties
-  std::string move_group_name{ "panda_arm" };
-  std::string planning_frame{ "panda_link0" };
-  std::string ee_frame_name{ "panda_link8" };
+  std::string move_group_name{ "manipulator" };
+  std::string planning_frame{ "base_link" };
+  std::string ee_frame_name{ "end_effector_link" };
   // std::string move_group_name{ "manipulator" };
   // std::string planning_frame{ "base_link" };
   // std::string ee_frame_name{ "end_effector_link" };

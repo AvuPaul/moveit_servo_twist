@@ -63,61 +63,61 @@ Visualization Manager:
           Expand Link Details: false
           Expand Tree: false
           Link Tree Style: Links in Alphabetic Order
-          panda_hand:
+          robotiq_85_base_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          panda_leftfinger:
+          robotiq_85_left_finger:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          panda_link0:
+          base_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          panda_link1:
+          shoulder_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          panda_link2:
+          half_arm_1_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          panda_link3:
+          half_arm_2_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          panda_link4:
+          forearm_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          panda_link5:
+          spherical_wrist_1_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          panda_link6:
+          spherical_wrist_2_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          panda_link7:
+          bracelet_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          panda_link8:
+          end_effector_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          panda_rightfinger:
+          robotiq_85_right_finger:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -131,29 +131,29 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        panda_hand:
+        robotiq_85_base_link:
           Value: true
-        panda_leftfinger:
+        robotiq_85_left_finger:
           Value: false
-        panda_link0:
+        base_link:
           Value: false
-        panda_link1:
+        shoulder_link:
           Value: false
-        panda_link2:
+        half_arm_1_link:
           Value: false
-        panda_link3:
+        half_arm_2_link:
           Value: false
-        panda_link4:
+        forearm_link:
           Value: false
-        panda_link5:
+        spherical_wrist_1_link:
           Value: false
-        panda_link6:
+        spherical_wrist_2_link:
           Value: false
-        panda_link7:
+        bracelet_link:
           Value: false
-        panda_link8:
+        end_effector_link:
           Value: false
-        panda_rightfinger:
+        robotiq_85_right_finger:
           Value: false
         world:
           Value: true
@@ -164,19 +164,19 @@ Visualization Manager:
       Show Names: false
       Tree:
         world:
-          panda_link0:
-            panda_link1:
-              panda_link2:
-                panda_link3:
-                  panda_link4:
-                    panda_link5:
-                      panda_link6:
-                        panda_link7:
-                          panda_link8:
-                            panda_hand:
-                              panda_leftfinger:
+          base_link:
+            shoulder_link:
+              half_arm_1_link:
+                half_arm_2_link:
+                  forearm_link:
+                    spherical_wrist_1_link:
+                      spherical_wrist_2_link:
+                        bracelet_link:
+                          end_effector_link:
+                            robotiq_85_base_link:
+                              robotiq_85_left_finger:
                                 {}
-                              panda_rightfinger:
+                              robotiq_85_right_finger:
                                 {}
       Update Interval: 0
       Value: true

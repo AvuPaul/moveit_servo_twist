@@ -91,7 +91,7 @@ def generate_servo_test_description(
                 package="tf2_ros",
                 plugin="tf2_ros::StaticTransformBroadcasterNode",
                 name="static_tf2_broadcaster",
-                parameters=[{"/child_frame_id": "panda_link0", "/frame_id": "world"}],
+                parameters=[{"/child_frame_id": "base_link", "/frame_id": "world"}],
             ),
         ],
         output="screen",
@@ -118,8 +118,8 @@ def generate_servo_test_description(
     #     executable="component_container_mt",
     #     composable_node_descriptions=[
     #         ComposableNode(
-    #             package="moveit_servo",
-    #             plugin="moveit_servo::ServoNode",
+    #             package="moveit_servo_kinova",
+    #             plugin="moveit_servo_kinova::ServoNode",
     #             name="servo_node",
     #             parameters=[
     #                 servo_params,
