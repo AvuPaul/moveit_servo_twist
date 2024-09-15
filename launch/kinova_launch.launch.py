@@ -59,7 +59,7 @@ def launch_setup(context, *args, **kwargs):
         "gripper_max_velocity": gripper_max_velocity,
         "gripper_max_force": gripper_max_force,
         "use_internal_bus_gripper_comm": use_internal_bus_gripper_comm,
-        "initial_positions": dict(joint_1=0.0, joint_2=0.8, joint_3=-3.14, joint_4=-2.51, joint_5=0.0, joint_6=0.96, joint_7=1.57),
+        # "initial_positions": "${dict(joint_1=0.0,joint_2=0.26,joint_3=3.14,joint_4=0.0,joint_5=0.0,joint_6=0.0,joint_7=0.0)}",
     }
 
     moveit_config = (
@@ -94,15 +94,15 @@ def launch_setup(context, *args, **kwargs):
     )
 
     # Publish TF
-    robot_state_publisher = Node(
-        package="robot_state_publisher",
-        executable="robot_state_publisher",
-        name="robot_state_publisher",
-        output="both",
-        parameters=[
-            moveit_config.robot_description,
-        ],
-    )
+    # robot_state_publisher = Node(
+    #     package="robot_state_publisher",
+    #     executable="robot_state_publisher",
+    #     name="robot_state_publisher",
+    #     output="both",
+    #     parameters=[
+    #         moveit_config.robot_description,
+    #     ],
+    # )
 
     # ros2_control using FakeSystem as hardware
     ros2_controllers_path = os.path.join(
@@ -240,7 +240,7 @@ def launch_setup(context, *args, **kwargs):
 
     nodes_to_start = [
         ros2_control_node,
-        robot_state_publisher,
+        # robot_state_publisher,
         joint_state_broadcaster_spawner,
         delay_rviz_after_joint_state_broadcaster_spawner,
         robot_traj_controller_spawner,
