@@ -51,8 +51,8 @@ def launch_setup(context, *args, **kwargs):
 
     launch_arguments = {
         "robot_ip": robot_ip,
-        # "use_fake_hardware": use_fake_hardware,
-        "use_fake_hardware": "true",
+        "use_fake_hardware": use_fake_hardware,
+        # "use_fake_hardware": "true",
         "gripper": "robotiq_2f_85",
         "gripper_joint_name": "robotiq_85_left_knuckle_joint",
         "dof": "7",
@@ -65,7 +65,7 @@ def launch_setup(context, *args, **kwargs):
     moveit_config = (
         MoveItConfigsBuilder("gen3", package_name="kinova_gen3_7dof_robotiq_2f_85_moveit_config")
         .robot_description(mappings=launch_arguments)
-        .planning_pipelines(pipelines=["ompl", "chomp", "pilz_industrial_motion_planner"])
+        # .planning_pipelines(pipelines=["ompl", "chomp", "pilz_industrial_motion_planner"])
         .to_moveit_configs()
     )
 
@@ -109,6 +109,7 @@ def launch_setup(context, *args, **kwargs):
         get_package_share_directory("kinova_gen3_7dof_robotiq_2f_85_moveit_config"),
         "config",
         "ros2_controllers.yaml",
+        # "moveit_controllers.yaml",
     )
     ros2_control_node = Node(
         package="controller_manager",

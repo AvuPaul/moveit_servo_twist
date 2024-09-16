@@ -53,6 +53,9 @@
 #include <rclcpp/time.hpp>
 #include <rclcpp/utilities.hpp>
 #include <thread>
+// #include <tf2/LinearMath/Quaternion.h>
+// #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+// #include <shape_msgs/msg/solid_primitive.hpp>
 
 // We'll just set up parameters here
 const std::string JOY_TOPIC = "/joy";
@@ -193,28 +196,73 @@ public:
       // collision_object.header.frame_id = "base_link";
       collision_object.id = "box";
 
-      shape_msgs::msg::SolidPrimitive table_1;
-      table_1.type = table_1.BOX;
-      table_1.dimensions = { 0.4, 0.6, 0.03 };
+      shape_msgs::msg::SolidPrimitive floor;
+      floor.type = floor.BOX;
+      floor.dimensions = { 1.8, 1.8, 0.03 };
 
-      geometry_msgs::msg::Pose table_1_pose;
-      table_1_pose.position.x = 0.6;
-      table_1_pose.position.y = 0.0;
-      table_1_pose.position.z = 0.4;
+      geometry_msgs::msg::Pose floor_pose;
+      floor_pose.position.x = 0.0;
+      floor_pose.position.y = 0.0;
+      floor_pose.position.z = -0.21;
+      // floor_pose.position.z = 0.08;
 
-      shape_msgs::msg::SolidPrimitive table_2;
-      table_2.type = table_2.BOX;
-      table_2.dimensions = { 0.6, 0.4, 0.03 };
+      shape_msgs::msg::SolidPrimitive robot;
+      robot.type = robot.BOX;
+      robot.dimensions = { 0.7, 0.4, 0.25 };
 
-      geometry_msgs::msg::Pose table_2_pose;
-      table_2_pose.position.x = 0.0;
-      table_2_pose.position.y = 0.5;
-      table_2_pose.position.z = 0.25;
+      geometry_msgs::msg::Pose robot_pose;
+      robot_pose.position.x = 0.0;
+      robot_pose.position.y = 0.0;
+      robot_pose.position.z = -0.125;
 
-      collision_object.primitives.push_back(table_1);
-      collision_object.primitive_poses.push_back(table_1_pose);
-      collision_object.primitives.push_back(table_2);
-      collision_object.primitive_poses.push_back(table_2_pose);
+      shape_msgs::msg::SolidPrimitive wheel_fl;
+      wheel_fl.type = wheel_fl.BOX;
+      wheel_fl.dimensions = { 0.24, 0.1, 0.24 };
+
+      geometry_msgs::msg::Pose wheel_fl_pose;
+      wheel_fl_pose.position.x = 0.205;
+      wheel_fl_pose.position.y = 0.25;
+      wheel_fl_pose.position.z = -0.09;
+
+      shape_msgs::msg::SolidPrimitive wheel_fr;
+      wheel_fr.type = wheel_fr.BOX;
+      wheel_fr.dimensions = { 0.24, 0.1, 0.24 };
+
+      geometry_msgs::msg::Pose wheel_fr_pose;
+      wheel_fr_pose.position.x = 0.205;
+      wheel_fr_pose.position.y = -0.25;
+      wheel_fr_pose.position.z = -0.09;
+
+      shape_msgs::msg::SolidPrimitive wheel_rl;
+      wheel_rl.type = wheel_rl.BOX;
+      wheel_rl.dimensions = { 0.24, 0.1, 0.24 };
+
+      geometry_msgs::msg::Pose wheel_rl_pose;
+      wheel_rl_pose.position.x = -0.205;
+      wheel_rl_pose.position.y = 0.25;
+      wheel_rl_pose.position.z = -0.09;
+
+      shape_msgs::msg::SolidPrimitive wheel_rr;
+      wheel_rr.type = wheel_rr.BOX;
+      wheel_rr.dimensions = { 0.24, 0.1, 0.24 };
+
+      geometry_msgs::msg::Pose wheel_rr_pose;
+      wheel_rr_pose.position.x = -0.205;
+      wheel_rr_pose.position.y = -0.25;
+      wheel_rr_pose.position.z = -0.09;
+
+      collision_object.primitives.push_back(floor);
+      collision_object.primitive_poses.push_back(floor_pose);
+      collision_object.primitives.push_back(robot);
+      collision_object.primitive_poses.push_back(robot_pose);
+      collision_object.primitives.push_back(wheel_fl);
+      collision_object.primitive_poses.push_back(wheel_fl_pose);
+      collision_object.primitives.push_back(wheel_fr);
+      collision_object.primitive_poses.push_back(wheel_fr_pose);
+      collision_object.primitives.push_back(wheel_rl);
+      collision_object.primitive_poses.push_back(wheel_rl_pose);
+      collision_object.primitives.push_back(wheel_rr);
+      collision_object.primitive_poses.push_back(wheel_rr_pose);
       collision_object.operation = collision_object.ADD;
 
       moveit_msgs::msg::PlanningSceneWorld psw;

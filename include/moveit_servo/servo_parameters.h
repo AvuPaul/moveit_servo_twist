@@ -67,18 +67,19 @@ struct ServoParameters
   std::string robot_link_command_frame{ "base_link" };
   // std::string robot_link_command_frame{ "base_link" };
   std::string command_in_type{ "unitless" };
-  double linear_scale{ 0.4 };
-  double rotational_scale{ 0.8 };
-  double joint_scale{ 0.5 };
+  double linear_scale{ 0.2 };
+  double rotational_scale{ 0.2 };
+  double joint_scale{ 0.2 };
   // Properties of Servo calculations
   double override_velocity_scaling_factor{ 0.0 };
   // Properties of outgoing commands
   std::string command_out_topic{ "/joint_trajectory_controller/joint_trajectory" };
   // std::string command_out_topic{ "/joint_trajectory_controller/joint_trajectory" };
-  double publish_period{ 0.034 };
+  // double publish_period{ 0.002 }; // was 0.034
+  double publish_period{ 0.12 }; // was 0.034
   std::string command_out_type{ "trajectory_msgs/JointTrajectory" };
   bool publish_joint_positions{ true };
-  bool publish_joint_velocities{ true };
+  bool publish_joint_velocities{ false };
   bool publish_joint_accelerations{ false };
   // Plugins for smoothing outgoing commands
   std::string joint_topic{ "/joint_states" };
