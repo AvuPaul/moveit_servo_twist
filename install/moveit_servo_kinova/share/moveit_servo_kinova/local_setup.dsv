@@ -1,0 +1,3 @@
+source;share/moveit_servo_kinova/environment/ament_prefix_path.sh
+source;share/moveit_servo_kinova/environment/library_path.sh
+source;share/moveit_servo_kinova/environment/path.sh

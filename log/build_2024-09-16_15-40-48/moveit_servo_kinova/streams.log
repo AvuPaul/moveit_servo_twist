@@ -1,0 +1,75 @@
+[0.019s] Invoking command in '/ros2_ws/src/moveit_servo_kinova/build/moveit_servo_kinova': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/moveit_configs_utils:/ros2_ws/install/rqt_joint_trajectory_controller:/ros2_ws/install/rqt_controller_manager:/ros2_ws/install/ros2controlcli:/ros2_ws/install/ros2_controllers_test_nodes:/ros2_ws/install/launch_param_builder:/ros2_ws/install/kinova_project:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/src/moveit_servo_kinova/build/moveit_servo_kinova -- -j16 -l16
+[0.092s] [  6%] Built target gtest
+[0.097s] [ 12%] Built target fake_command_publisher
+[0.099s] [ 21%] Built target servo_controller_input
+[0.099s] [ 24%] Built target gtest_main
+[0.106s] [ 33%] Built target moveit_servo_lib_parameters
+[0.150s] [ 39%] Built target test_servo_collision
+[0.155s] [ 45%] Built target test_servo_integration
+[0.165s] [ 63%] Built target moveit_servo_lib
+[0.209s] [ 69%] Built target servo_node
+[0.214s] [ 75%] Built target servo_calcs_unit_tests
+[0.223s] [ 81%] Built target pose_tracking
+[0.255s] [ 87%] Built target servo_node_main
+[0.267s] [ 93%] Built target servo_pose_tracking_demo
+[0.269s] [100%] Built target test_servo_pose_tracking
+[0.280s] Invoked command in '/ros2_ws/src/moveit_servo_kinova/build/moveit_servo_kinova' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/moveit_configs_utils:/ros2_ws/install/rqt_joint_trajectory_controller:/ros2_ws/install/rqt_controller_manager:/ros2_ws/install/ros2controlcli:/ros2_ws/install/ros2_controllers_test_nodes:/ros2_ws/install/launch_param_builder:/ros2_ws/install/kinova_project:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/src/moveit_servo_kinova/build/moveit_servo_kinova -- -j16 -l16
+[0.473s] Invoking command in '/ros2_ws/src/moveit_servo_kinova/build/moveit_servo_kinova': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/moveit_configs_utils:/ros2_ws/install/rqt_joint_trajectory_controller:/ros2_ws/install/rqt_controller_manager:/ros2_ws/install/ros2controlcli:/ros2_ws/install/ros2_controllers_test_nodes:/ros2_ws/install/launch_param_builder:/ros2_ws/install/kinova_project:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/src/moveit_servo_kinova/build/moveit_servo_kinova
+[0.484s] -- Install configuration: "Release"
+[0.484s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/lib/libmoveit_servo_lib.so.2.5.5
+[0.484s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/lib/libmoveit_servo_lib.so
+[0.484s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/lib/libmoveit_servo_lib_parameters.so.2.5.5
+[0.484s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/lib/libmoveit_servo_lib_parameters.so
+[0.484s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/lib/libpose_tracking.so
+[0.484s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/lib/libservo_node.so
+[0.484s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/lib/libservo_controller_input.so
+[0.484s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/lib/moveit_servo_kinova/servo_node_main
+[0.484s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/lib/moveit_servo_kinova/servo_pose_tracking_demo
+[0.485s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/lib/moveit_servo_kinova/fake_command_publisher
+[0.485s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/include
+[0.485s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/include/moveit_servo
+[0.485s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/include/moveit_servo/status_codes.h
+[0.485s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/include/moveit_servo/enforce_limits.hpp
+[0.485s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/include/moveit_servo/servo_server.h
+[0.485s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/include/moveit_servo/pose_tracking.h
+[0.486s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/include/moveit_servo/servo.h
+[0.486s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/include/moveit_servo/collision_check.h
+[0.486s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/include/moveit_servo/parameter_descriptor_builder.hpp
+[0.486s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/include/moveit_servo/servo_node.h
+[0.486s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/include/moveit_servo/servo_calcs.h
+[0.486s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/include/moveit_servo/servo_parameters.h
+[0.486s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/include/moveit_servo/utilities.h
+[0.486s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/include/moveit_servo/make_shared_from_pool.h
+[0.486s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/launch
+[0.486s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/launch/pose_tracking_example.launch.py
+[0.486s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/launch/servo_example.launch.py
+[0.486s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/launch/kinova_launch.launch.py
+[0.486s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/config
+[0.487s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/config/pose_tracking_settings.yaml
+[0.487s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/config/demo_rviz_config.rviz
+[0.487s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/config/demo_rviz_pose_tracking.rviz
+[0.487s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/config/panda_simulated_config_pose_tracking.yaml
+[0.487s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/config/gen3_simulated_config.yaml
+[0.487s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/environment/library_path.sh
+[0.487s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/environment/library_path.dsv
+[0.487s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/ament_index/resource_index/package_run_dependencies/moveit_servo_kinova
+[0.487s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/ament_index/resource_index/parent_prefix_path/moveit_servo_kinova
+[0.487s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/environment/ament_prefix_path.sh
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/environment/ament_prefix_path.dsv
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/environment/path.sh
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/environment/path.dsv
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/local_setup.bash
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/local_setup.sh
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/local_setup.zsh
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/local_setup.dsv
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/package.dsv
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/ament_index/resource_index/packages/moveit_servo_kinova
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/ament_index/resource_index/rclcpp_components/moveit_servo_kinova
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/cmake/export_moveit_servo_kinovaExport.cmake
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/cmake/export_moveit_servo_kinovaExport-release.cmake
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/cmake/ament_cmake_export_targets-extras.cmake
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/cmake/moveit_servo_kinovaConfig.cmake
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/cmake/moveit_servo_kinovaConfig-version.cmake
+[0.488s] -- Up-to-date: /ros2_ws/src/moveit_servo_kinova/install/moveit_servo_kinova/share/moveit_servo_kinova/package.xml
+[0.488s] Invoked command in '/ros2_ws/src/moveit_servo_kinova/build/moveit_servo_kinova' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/moveit_configs_utils:/ros2_ws/install/rqt_joint_trajectory_controller:/ros2_ws/install/rqt_controller_manager:/ros2_ws/install/ros2controlcli:/ros2_ws/install/ros2_controllers_test_nodes:/ros2_ws/install/launch_param_builder:/ros2_ws/install/kinova_project:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/src/moveit_servo_kinova/build/moveit_servo_kinova

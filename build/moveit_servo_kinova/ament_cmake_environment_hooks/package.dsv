@@ -1,0 +1,4 @@
+source;share/moveit_servo_kinova/local_setup.bash
+source;share/moveit_servo_kinova/local_setup.dsv
+source;share/moveit_servo_kinova/local_setup.sh
+source;share/moveit_servo_kinova/local_setup.zsh
