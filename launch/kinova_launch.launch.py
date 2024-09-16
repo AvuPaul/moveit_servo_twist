@@ -59,6 +59,7 @@ def launch_setup(context, *args, **kwargs):
         "gripper_max_velocity": gripper_max_velocity,
         "gripper_max_force": gripper_max_force,
         "use_internal_bus_gripper_comm": use_internal_bus_gripper_comm,
+        "robot_controller": "twist_controller"
         # "initial_positions": "${dict(joint_1=0.0,joint_2=0.26,joint_3=3.14,joint_4=0.0,joint_5=0.0,joint_6=0.0,joint_7=0.0)}",
     }
 
@@ -70,8 +71,8 @@ def launch_setup(context, *args, **kwargs):
     )
 
     # Get parameters for the Servo node
-    servo_yaml = load_yaml("moveit_servo_kinova", "config/gen3_simulated_config.yaml")
-    servo_params = {"moveit_servo_kinova": servo_yaml}
+    servo_yaml = load_yaml("moveit_servo_twist", "config/gen3_simulated_config.yaml")
+    servo_params = {"moveit_servo_twist": servo_yaml}
 
     moveit_config.moveit_cpp.update({"use_sim_time": use_sim_time.perform(context) == "true"})
 
@@ -213,7 +214,7 @@ def launch_setup(context, *args, **kwargs):
                 parameters=[{"child_frame_id": "/base_link", "frame_id": "/world"}],
             ),
             ComposableNode(
-                package="moveit_servo_kinova",
+                package="moveit_servo_twist",
                 plugin="moveit_servo::JoyToServoPub",
                 name="controller_to_servo_node",
             ),
@@ -228,7 +229,7 @@ def launch_setup(context, *args, **kwargs):
     # Launch a standalone Servo node.
     # As opposed to a node component, this may be necessary (for example) if Servo is running on a different PC
     servo_node = Node(
-        package="moveit_servo_kinova",
+        package="moveit_servo_twist",
         executable="servo_node_main",
         parameters=[
             servo_params,

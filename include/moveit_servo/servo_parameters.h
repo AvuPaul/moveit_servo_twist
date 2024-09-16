@@ -65,7 +65,6 @@ struct ServoParameters
   std::string cartesian_command_in_topic{ "~/delta_twist_cmds" };
   std::string joint_command_in_topic{ "~/delta_joint_cmds" };
   std::string robot_link_command_frame{ "base_link" };
-  // std::string robot_link_command_frame{ "base_link" };
   std::string command_in_type{ "unitless" };
   double linear_scale{ 0.2 };
   double rotational_scale{ 0.5 };
@@ -74,12 +73,13 @@ struct ServoParameters
   double override_velocity_scaling_factor{ 0.0 };
   // Properties of outgoing commands
   std::string command_out_topic{ "/joint_trajectory_controller/joint_trajectory" };
-  // std::string command_out_topic{ "/joint_trajectory_controller/joint_trajectory" };
+  // std::string command_out_topic{ "/twist_controller/commands" };
   // double publish_period{ 0.002 }; // was 0.034
   double publish_period{ 0.25 }; // was 0.12
   std::string command_out_type{ "trajectory_msgs/JointTrajectory" };
-  bool publish_joint_positions{ true };
-  bool publish_joint_velocities{ false };
+  // std::string command_out_type{ "geometry_msgs/msg/Twist" };
+  bool publish_joint_positions{ false };
+  bool publish_joint_velocities{ true };
   bool publish_joint_accelerations{ false };
   // Plugins for smoothing outgoing commands
   std::string joint_topic{ "/joint_states" };

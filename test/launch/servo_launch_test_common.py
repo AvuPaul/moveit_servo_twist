@@ -118,7 +118,7 @@ def generate_servo_test_description(
     #     executable="component_container_mt",
     #     composable_node_descriptions=[
     #         ComposableNode(
-    #             package="moveit_servo_kinova",
+    #             package="moveit_servo_twist",
     #             plugin="moveit_servo::ServoNode",
     #             name="servo_node",
     #             parameters=[
